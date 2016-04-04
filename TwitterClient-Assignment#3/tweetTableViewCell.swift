@@ -33,7 +33,6 @@ class tweetTableViewCell: UITableViewCell {
     
     var tweet:Tweet! {
         didSet {
-            
             if let retweet = tweet.retweet {
                 if let name = tweet.user?.name {
                     topLabel.text = "\(name) retweeted"

@@ -43,23 +43,27 @@ class ProfileViewController: UIViewController,UITableViewDataSource, UITableView
         tableView.estimatedRowHeight = 228
         tableView.rowHeight = UITableViewAutomaticDimension
 
-        pullToRefresh()
-        refreshProfile()
         
-        if let displayName = User.currentUser?.name {
+        if let displayName = User.currentUser?.screenName {
             userName = displayName
         }
+        
+        refreshProfile()
+        pullToRefresh()
 
     }
     
     func reloadTable() {
-        TwitterClient.shareInstance.homeTimeLine({ (tweets:[Tweet]) -> () in
-            self.tweets = tweets
-            self.tableView.reloadData()
-            }) { (error:NSError) -> () in
-                
+        let param = ["screen_name" : userName]
+
+        TwitterClient.shareInstance.UserTimeLine(param) { (data, error) -> () in
+            if let data = data {
+                self.tweets = data
+                self.tableView.reloadData()
+            }
+            
         }
-        refreshControl?.endRefreshing()
+               refreshControl?.endRefreshing()
         
     }
     

@@ -27,6 +27,30 @@ class TwitterClient: BDBOAuth1SessionManager  {
         }
     }
     
+    func UserTimeLine(params: NSDictionary?,completion: (data: [Tweet]?, error: NSError?) ->()) {
+        GET("1.1/statuses/user_timeline.json", parameters: nil, progress: nil, success: { (task:NSURLSessionDataTask, response:AnyObject?) -> Void in
+            let tweets = Tweet.tweetWithArray(response as! [NSDictionary])
+            completion(data: tweets, error: nil)
+            }) { (session:NSURLSessionDataTask?, error:
+                NSError) -> Void in
+                completion(data: nil, error: error)
+                        }
+    }
+    
+    func mentionTimeLine(params: NSDictionary?,completion: (data: [Tweet]?, error: NSError?) ->()) {
+        GET("1.1/statuses/mentions_timeline.json", parameters: params, progress: nil, success: { (task:NSURLSessionDataTask, response:AnyObject?) -> Void in
+            let tweets = Tweet.tweetWithArray(response as! [NSDictionary])
+            completion(data: tweets, error: nil)
+            }) { (session:NSURLSessionDataTask?, error:
+                NSError) -> Void in
+                completion(data: nil, error: error)
+        }
+    }
+
+    
+    
+
+    
     func login(success : () -> (), failure:(NSError) -> ()) {
         loginSuccess = success
         loginFailure = failure
@@ -134,7 +158,8 @@ class TwitterClient: BDBOAuth1SessionManager  {
             let curUserRetweet = tweet["current_user_retweet"] as! NSDictionary
             retweetedId = curUserRetweet["id"] as? NSNumber
             
-            completion(retweetedId: retweetedId, error: nil)            }) { (task:NSURLSessionDataTask?, error:NSError) -> Void in
+            completion(retweetedId: retweetedId, error: nil)
+            }) { (task:NSURLSessionDataTask?, error:NSError) -> Void in
                 print(error.localizedDescription)
                 completion(retweetedId: nil, error: error)        }
     }

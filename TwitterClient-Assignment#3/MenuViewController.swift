@@ -17,7 +17,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var name: UILabel!
     
     @IBOutlet weak var screenName: UILabel!
-    var viewController:[UIViewController] = [UIStoryboard.TwitterController()!, UIStoryboard.profileController()!,UIStoryboard.profileController()!,UIStoryboard.profileController()!]
+    var viewController:[UIViewController] = [UIStoryboard.TwitterController()!, UIStoryboard.profileController()!,UIStoryboard.mentionViewController()!,UIStoryboard.profileController()!]
     
     var containerViewController:ContainerViewController!
 

@@ -27,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let profileViewController = UIStoryboard.profileController()! as ProfileViewController
             
+            
+            let mentionViewController = UIStoryboard.mentionViewController()! as MentionViewConller
+            
             vc.menuViewController = menuViewController
             vc.currentViewController = twiterViewController
                        
@@ -91,6 +94,10 @@ extension UIStoryboard {
     
     class func profileController() -> ProfileViewController? {
         return mainStoryboard().instantiateViewControllerWithIdentifier("ProfileViewController") as? ProfileViewController
+    }
+    
+    class func mentionViewController() -> MentionViewConller? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("MentionViewConller") as? MentionViewConller
     }
     
 }

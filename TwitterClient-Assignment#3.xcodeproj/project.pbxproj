@@ -24,6 +24,7 @@
 		12AAB9751CB0153500C9D505 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AAB9741CB0153500C9D505 /* ProfileViewController.swift */; };
 		12AAB9771CB0AD4F00C9D505 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AAB9761CB0AD4F00C9D505 /* MenuCell.swift */; };
 		783DF26DC451B4B7C77212FC /* Pods_TwitterClient_Assignment_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51268E423E4A9B98D4D7303 /* Pods_TwitterClient_Assignment_3.framework */; };
+		E0330C6F1CB24F26001CE042 /* MentionViewConller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0330C6E1CB24F26001CE042 /* MentionViewConller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		12AAB9761CB0AD4F00C9D505 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		51CD5D36FB144F88992C567D /* Pods-TwitterClient-Assignment#3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClient-Assignment#3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterClient-Assignment#3/Pods-TwitterClient-Assignment#3.debug.xcconfig"; sourceTree = "<group>"; };
 		653233D80E0A9791452A686A /* Pods-TwitterClient-Assignment#3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterClient-Assignment#3.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterClient-Assignment#3/Pods-TwitterClient-Assignment#3.release.xcconfig"; sourceTree = "<group>"; };
+		E0330C6E1CB24F26001CE042 /* MentionViewConller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionViewConller.swift; sourceTree = "<group>"; };
 		E51268E423E4A9B98D4D7303 /* Pods_TwitterClient_Assignment_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterClient_Assignment_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 				12AAB9721CB014B600C9D505 /* MenuViewController.swift */,
 				12AAB9741CB0153500C9D505 /* ProfileViewController.swift */,
 				12AAB9761CB0AD4F00C9D505 /* MenuCell.swift */,
+				E0330C6E1CB24F26001CE042 /* MentionViewConller.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				1292B7911CA686A7000AE32D /* AppDelegate.swift in Sources */,
 				1292B7AB1CA68944000AE32D /* tweet.swift in Sources */,
 				1292B7B01CA6B56E000AE32D /* tweetTableViewCell.swift in Sources */,
+				E0330C6F1CB24F26001CE042 /* MentionViewConller.swift in Sources */,
 				12AAB9771CB0AD4F00C9D505 /* MenuCell.swift in Sources */,
 				1292B7B41CA79703000AE32D /* DetailViewController.swift in Sources */,
 			);
@@ -392,6 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "TwitterClient-Assignment#3/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jackyCode.com.TwitterClient-Assignment-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -404,6 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "TwitterClient-Assignment#3/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jackyCode.com.TwitterClient-Assignment-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
